@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "xkcd viewer for the new tab page",
+  "version": "0.1",
+  "description": "Override the new tab page with an xkcd comic viewer",
+  "author": "Nick Morgan",
+  "incognito": "split",
+  "chrome_url_overrides": {
+    "newtab": "xkcd_ntp.html"
+  },
+  "permissions": [
+    "https://*/",
+    "http://xkcd.com/"
+  ]
+}
