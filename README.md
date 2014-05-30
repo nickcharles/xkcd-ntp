@@ -10,6 +10,7 @@ TODO:
 	Add expanding section that shows alt text below the comic.
 
 
+========
 
 
 All credit for the comic material goes to the author and illustrator at http://xkcd.com/. No copyright infringment is intended with this extension.
