@@ -1,14 +1,4 @@
 // Wait for request and then populate title and image
-function setup () {
-  console.log(this.response);
-  document.getElementById("comicTitle").innerHTML=this.response.title;
-  document.getElementById("comic").src=this.response.img;
-  document.getElementById("comic").alt=this.response.title;
-  document.getElementById("comic").title=this.response.alt;
-
-  curComic = this.response.num;
-  recComic = this.response.num;
-}
 
 function reqListener () {
   console.log(this.response);
@@ -21,19 +11,35 @@ function reqListener () {
 }
 
 function getFirst() {
-  var fReq = new XMLHttpRequest();
-  fReq.responseType = "json";
-  fReq.onload = reqListener;
-  fReq.open("GET", "http://xkcd.com/1/info.0.json", true);
-  fReq.send();
+  var Req = new XMLHttpRequest();
+  Req.responseType = "json";
+  Req.onload = reqListener;
+  Req.open("GET", "http://xkcd.com/1/info.0.json", true);
+  Req.send();
+}
+
+function getPrev() {
+  var Req = new XMLHttpRequest();
+  Req.responseType = "json";
+  Req.onload = reqListener;
+  Req.open("GET", "http://xkcd.com/" + (curComic-1) + "/info.0.json", true);
+  Req.send();
+}
+
+function getNext() {
+  var Req = new XMLHttpRequest();
+  Req.responseType = "json";
+  Req.onload = reqListener;
+  Req.open("GET", "http://xkcd.com/" + (curComic+1) + "/info.0.json", true);
+  Req.send();
 }
 
 function getLast() {
-  var nReq = new XMLHttpRequest();
-  nReq.responseType = "json";
-  nReq.onload = reqListener;
-  nReq.open("GET", "http://xkcd.com/" + recComic + "/info.0.json", true);
-  nReq.send();
+  var Req = new XMLHttpRequest();
+  Req.responseType = "json";
+  Req.onload = reqListener;
+  Req.open("GET", "http://xkcd.com/info.0.json", true);
+  Req.send();
 }
 
 //Create new XMLHttpRequest object and get new comic information
@@ -42,17 +48,25 @@ var recComic = null;
 var curComic = null;
 
 oReq.responseType = "json";
-oReq.onload = setup;
+oReq.onload = reqListener;
 oReq.open("GET", "http://xkcd.com/info.0.json", true);
 oReq.send();
 
-var fl = document.getElementById("first");
-fl.addEventListener("click", getFirst, false);
-// var pl = document.getElementById("prev");
-// pl.addEventListener("click", getPrev, false);
+var flt = document.getElementById("firstTop");
+flt.addEventListener("click", getFirst, false);
+var flb = document.getElementById("firstBottom");
+flb.addEventListener("click", getFirst, false);
+var plt = document.getElementById("prevTop");
+plt.addEventListener("click", getPrev, false);
+var plb = document.getElementById("prevBottom");
+plb.addEventListener("click", getPrev, false);
 // var rl = document.getElementById("random");
 // rl.addEventListener("click", getRandom, false);
-// var nl = document.getElementById("next");
-// nl.addEventListener("click", getNext, false);
-var ll = document.getElementById("last");
-ll.addEventListener("click", getLast, false);
+var nlt = document.getElementById("nextTop");
+nlt.addEventListener("click", getNext, false);
+var nlb = document.getElementById("nextBottom");
+nlb.addEventListener("click", getNext, false);
+var llt = document.getElementById("lastTop");
+llt.addEventListener("click", getLast, false);
+var llb = document.getElementById("lastBottom");
+llb.addEventListener("click", getLast, false);
