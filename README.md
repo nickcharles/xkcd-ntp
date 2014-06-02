@@ -6,10 +6,11 @@ An xkcd new tab page for Google Chrome, an extension of romance,sarcasm, math, a
 Displays the most recent xkcd comic on the new tab page instead of the original content provided by Chrome.
 
 TODO:
-Add browsing feature to go view all comics, just like on actual website.
 Add expanding section that shows alt text below the comic.
-Center display.
-Edit icons to add transparency.
+Center display?
+Add bookmarks on page to expand utility.
+
+Now available on the Chrome Web Store at https://chrome.google.com/webstore/detail/xkcd-new-tab-page/cjakkpghoepnjecfepbmmfofbbjijmgh
 
 
 ========
