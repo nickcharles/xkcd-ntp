@@ -1,9 +1,8 @@
 // Wait for request and then populate title and image
-
 function reqListener() {
   console.log(this.response);
   document.getElementById("comicTitle").innerHTML = this.response.title;
-  document.getElementById("comicNumber").innerHTML = this.response.num;
+  document.getElementById("comicNumber").innerHTML = "#"+this.response.num;
   document.getElementById("comic").src = this.response.img;
   document.getElementById("comic").alt = this.response.title;
   document.getElementById("comic").title = this.response.alt;
@@ -12,57 +11,38 @@ function reqListener() {
 }
 
 function setup() {
-  console.log(this.response);
-  document.getElementById("comicTitle").innerHTML = this.response.title;
-  document.getElementById("comicNumber").innerHTML = this.response.num;
-  document.getElementById("comic").src = this.response.img;
-  document.getElementById("comic").alt = this.response.title;
-  document.getElementById("comic").title = this.response.alt;
-
-  curComic = this.response.num;
   recComic = this.response.num;
-  
+  var listener = reqListener.bind(this);
+  listener();
+}
+
+function getComic(url) {
+  var Req = new XMLHttpRequest();
+  Req.responseType = "json";
+  Req.onload = reqListener;
+  Req.open("GET", url, true);
+  Req.send();
 }
 
 function getFirst() {
-  var Req = new XMLHttpRequest();
-  Req.responseType = "json";
-  Req.onload = reqListener;
-  Req.open("GET", "http://xkcd.com/1/info.0.json", true);
-  Req.send();
+  getComic("http://xkcd.com/1/info.0.json");
 }
 
 function getPrev() {
-  var Req = new XMLHttpRequest();
-  Req.responseType = "json";
-  Req.onload = reqListener;
-  Req.open("GET", "http://xkcd.com/" + (curComic-1) + "/info.0.json", true);
-  Req.send();
+  getComic("http://xkcd.com/" + (curComic-1) + "/info.0.json")
 }
 
 function getRandom() {
   randComic = Math.floor((Math.random() * recComic) + 1);
-  var Req = new XMLHttpRequest();
-  Req.responseType = "json";
-  Req.onload = reqListener;
-  Req.open("GET", "http://xkcd.com/" + randComic + "/info.0.json", true);
-  Req.send();
+  getComic("http://xkcd.com/" + randComic + "/info.0.json")
 }
 
 function getNext() {
-  var Req = new XMLHttpRequest();
-  Req.responseType = "json";
-  Req.onload = reqListener;
-  Req.open("GET", "http://xkcd.com/" + (curComic+1) + "/info.0.json", true);
-  Req.send();
+  getComic("http://xkcd.com/" + (curComic+1) + "/info.0.json")
 }
 
 function getLast() {
-  var Req = new XMLHttpRequest();
-  Req.responseType = "json";
-  Req.onload = reqListener;
-  Req.open("GET", "http://xkcd.com/info.0.json", true);
-  Req.send();
+  getComic("http://xkcd.com/info.0.json");
 }
 
 //Create new XMLHttpRequest object and get new comic information

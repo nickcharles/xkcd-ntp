@@ -33,10 +33,9 @@ div {
 }
 .comicNav li {
   display: inline;
-}
-.comicNav li a {
   background-color:#6E7B91;
   color: #FFF;
+  cursor: pointer;
   border: 1.5px solid #333;
   font-size: 16px;
   font-weight: 600;
@@ -49,6 +48,13 @@ div {
   box-shadow: 0 0 5px 0 gray;
   -moz-box-shadow: 0 0 5px 0 gray;
   -webkit-box-shadow: 0 0 5px 0 gray; 
+}
+.comicNav li:hover, .comicNav li:focus {
+  background-color: #FFF;
+  color: #6E7B91;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
 }
 #comic {
   display: block;
