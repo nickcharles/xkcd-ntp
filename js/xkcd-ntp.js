@@ -1,6 +1,5 @@
 // Wait for request and then populate title and image
 function reqListener() {
-  console.log(this.response);
   document.getElementById("comicTitle").innerHTML = this.response.title;
   document.getElementById("comicNumber").innerHTML = "#"+this.response.num;
   document.getElementById("comic").src = this.response.img;
