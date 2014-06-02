@@ -5,6 +5,8 @@ An xkcd new tab page for Google Chrome, an extension of romance,sarcasm, math, a
 
 Displays the most recent xkcd comic on the new tab page instead of the original content provided by Chrome.
 
+Written in pure JavaScript cause who needs JQuery.
+
 TODO:
 Add expanding section that shows alt text below the comic.
 Center display?
