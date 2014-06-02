@@ -21,6 +21,11 @@ div {
 #comicTitle {
   font-size: 21px;
   font-weight: 800;
+  margin-bottom:-7px;
+}
+#comicNumber {
+  font-size: 16px;
+  font-weight: 800;
 }
 .comicNav {
   padding: 0;
