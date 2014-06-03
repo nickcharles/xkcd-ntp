@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "xkcd New Tab Page",
+  "name": "xkcd - New Tab Page",
   "short_name": "xkcd-ntp",
-  "version": "1.0",
+  "version": "1.01",
   "description": "Override the new tab page with an xkcd comic viewer.",
   "icons": {
     "48": "icon48.png",
