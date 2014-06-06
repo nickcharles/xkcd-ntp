@@ -7,27 +7,41 @@
     <script src="js/xkcd-ntp.js" async></script>
   </head>
   <body>
-    <div id="comicContainer">
-      <h1 id="comicTitle"></h1>
-      <h2 id="comicNumber"></h2>
-      <ul class='comicNav'>
-        <li id="firstTop">|<</li>
-        <li id="prevTop">< Prev</li>
-        <li id="randomTop">Random</li>
-        <li id="nextTop">Next ></li>
-        <li id="lastTop">>|</li>
-      </ul>
-      <img id="comic">
-      <ul class='comicNav'>
-        <li id="firstBottom">|<</li>
-        <li id="prevBottom">< Prev</li>
-        <li id="randomBottom">Random</li>
-        <li id="nextBottom">Next ></li>
-        <li id="lastBottom">>|</li>
-      </ul>
-      <p>
-        <a href="http://xkcd.com/">http://xkcd.com/</a>
-      </p>
-    </div>
+    <table id="containerTable"><tr>
+      <td id="bookmarktd">
+        <div id="bookmarkContainer">
+          <h1 id="bookmarkTitle">Bookmarks</h1>
+        </div>
+      </td>
+      <td id="comictd">
+        <div id="comicContainer">
+          <h1 id="comicTitle"></h1>
+          <h2 id="comicNumber"></h2>
+          <ul class="comicNav">
+            <li id="firstTop">|<</li>
+            <li id="prevTop">< Prev</li>
+            <li id="randomTop">Random</li>
+            <li id="nextTop">Next ></li>
+            <li id="lastTop">>|</li>
+          </ul>
+          <img id="comic">
+          <ul class="comicNav">
+            <li id="firstBottom">|<</li>
+            <li id="prevBottom">< Prev</li>
+            <li id="randomBottom">Random</li>
+            <li id="nextBottom">Next ></li>
+            <li id="lastBottom">>|</li>
+          </ul>
+          <p>
+            <a href="http://xkcd.com/">http://xkcd.com/</a>
+          </p>
+        </div>
+      </td>
+      <td id="whatIftd">
+        <div id="whatIfContainer">
+          <h1 id="whatIfTitle">What If</h1>
+        </div>
+      </td>
+    </tr></table>
   </body>
 </html>

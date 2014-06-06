@@ -8,6 +8,34 @@ div {
   font-size: 16px;
   font-weight: 500;
 }
+#containerTable {
+  table-layout: fixed;
+  width: 100%;
+  margin: auto;
+}
+#containerTable td {
+  vertical-align: top;
+}
+#bookmarktd {
+  width: 50%;
+}
+#bookmarkContainer {
+  background: white;
+  border-style: solid;
+  border-width: 1.5px;
+  border-color: #071419;
+  border-radius: 12px;
+  -moz-border-radius: 12px;
+  width: 100%;
+  margin: auto;
+}
+#bookmarkTitle {
+  font-size: 21px;
+  font-weight: 800;
+}
+#comictd {
+  width: 780px;
+}
 #comicContainer {
   background: white;
   border-style: solid;
@@ -15,7 +43,7 @@ div {
   border-color: #071419;
   border-radius: 12px;
   -moz-border-radius: 12px;
-  width: 780px;
+  width: 100%;
   margin: auto;
 }
 #comicTitle {
@@ -60,4 +88,21 @@ div {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+#whatIftd {
+  width: 50%;
+}
+#whatIfContainer {
+  background: white;
+  border-style: solid;
+  border-width: 1.5px;
+  border-color: #071419;
+  border-radius: 12px;
+  -moz-border-radius: 12px;
+  width: 100%;
+  margin: auto;
+}
+#whatIfTitle {
+  font-size: 21px;
+  font-weight: 800;
 }
