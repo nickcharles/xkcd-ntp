@@ -5,6 +5,7 @@
     <title>New Tab</title>
     <script src="js/gAnalytics.js" async></script>
     <script src="js/xkcd-ntp.js" async></script>
+    <script src="js/what-if.js" async></script>
   </head>
   <body>
     <table id="containerTable"><tr>
@@ -39,7 +40,10 @@
       </td>
       <td id="whatIftd">
         <div id="whatIfContainer">
-          <h1 id="whatIfTitle">What If</h1>
+          <h1 id="dynamicTitle"></h1>
+          <a id="whatIfLink" href="https://what-if.xkcd.com/">
+            <p id="whatIfQuestion"></p>
+          </a>
         </div>
       </td>
     </tr></table>

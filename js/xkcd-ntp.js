@@ -5,25 +5,25 @@ var curComic = null;
 
 //Set event listeners on all buttons to run 
 var flt = document.getElementById("firstTop");
-flt.addEventListener("click", getFirst, false);
+flt.onload = flt.addEventListener("click", getFirst, false);
 var flb = document.getElementById("firstBottom");
-flb.addEventListener("click", getFirst, false);
+flb.onload = flb.addEventListener("click", getFirst, false);
 var plt = document.getElementById("prevTop");
-plt.addEventListener("click", getPrev, false);
+plt.onload = plt.addEventListener("click", getPrev, false);
 var plb = document.getElementById("prevBottom");
-plb.addEventListener("click", getPrev, false);
+plb.onload = plb.addEventListener("click", getPrev, false);
 var rlt = document.getElementById("randomTop");
-rlt.addEventListener("click", getRandom, false);
+rlt.onload = rlt.addEventListener("click", getRandom, false);
 var rlb = document.getElementById("randomBottom");
-rlb.addEventListener("click", getRandom, false);
+rlb.onload = rlb.addEventListener("click", getRandom, false);
 var nlt = document.getElementById("nextTop");
-nlt.addEventListener("click", getNext, false);
+nlt.onload = nlt.addEventListener("click", getNext, false);
 var nlb = document.getElementById("nextBottom");
-nlb.addEventListener("click", getNext, false);
+nlb.onload = nlb.addEventListener("click", getNext, false);
 var llt = document.getElementById("lastTop");
-llt.addEventListener("click", getLast, false);
+llt.onload = llt.addEventListener("click", getLast, false);
 var llb = document.getElementById("lastBottom");
-llb.addEventListener("click", getLast, false);
+llb.onload = llb.addEventListener("click", getLast, false);
 
 //Specify response type and send initial get request
 oReq.responseType = "json";
