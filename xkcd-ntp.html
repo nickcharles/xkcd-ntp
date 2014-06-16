@@ -6,6 +6,7 @@
     <script src="js/gAnalytics.js" async></script>
     <script src="js/xkcd-ntp.js" async></script>
     <script src="js/what-if.js" async></script>
+    <script src="js/bookmarks.js" async></script>
   </head>
   <body>
     <table id="containerTable"><tr>
@@ -19,19 +20,19 @@
           <h1 id="comicTitle"></h1>
           <h2 id="comicNumber"></h2>
           <ul class="comicNav">
-            <li id="firstTop">|<</li>
-            <li id="prevTop">< Prev</li>
+            <li id="firstTop">|&lt;</li>
+            <li id="prevTop">&lt; Prev</li>
             <li id="randomTop">Random</li>
-            <li id="nextTop">Next ></li>
-            <li id="lastTop">>|</li>
+            <li id="nextTop">Next &gt;</li>
+            <li id="lastTop">&gt;|</li>
           </ul>
           <img id="comic">
           <ul class="comicNav">
-            <li id="firstBottom">|<</li>
-            <li id="prevBottom">< Prev</li>
+            <li id="firstBottom">|&lt;</li>
+            <li id="prevBottom">&lt; Prev</li>
             <li id="randomBottom">Random</li>
-            <li id="nextBottom">Next ></li>
-            <li id="lastBottom">>|</li>
+            <li id="nextBottom">Next &gt;</li>
+            <li id="lastBottom">&gt;|</li>
           </ul>
           <p>
             <a href="http://xkcd.com/">http://xkcd.com/</a>
@@ -44,6 +45,7 @@
           <a id="whatIfLink" href="https://what-if.xkcd.com/">
             <p id="whatIfQuestion"></p>
           </a>
+          <p id="attribute"></p>
         </div>
       </td>
     </tr></table>
