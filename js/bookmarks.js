@@ -4,10 +4,12 @@ chrome.bookmarks.getChildren('1', function (results)
 		var bookmarkList = document.createElement("ul");
 		bookmarkContainer.appendChild(bookmarkList);
 
-		for (i = 0; i < results.length-1; ++i) {
+		for (i = 0; i < results.length; ++i) {
+			if (results[i].url.indexOf("chrome://") != -1) {
+				continue;
+			}
 			var bookmark = document.createElement("li");
 			var link = document.createElement("a");
-			link.rel = "icon";
 			link.innerHTML = results[i].title;
 			link.href = results[i].url;
 			
