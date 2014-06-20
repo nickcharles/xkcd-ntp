@@ -16,6 +16,8 @@ div {
 #containerTable td {
   vertical-align: top;
 }
+
+
 #bookmarktd {
   width: 50%;
 }
@@ -28,6 +30,8 @@ div {
   -moz-border-radius: 12px;
   width: 100%;
   margin: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 #bookmarkContainer ul {
   margin: 1em;
@@ -38,6 +42,8 @@ div {
   font-size: 21px;
   font-weight: 800;
 }
+
+
 #comictd {
   width: 780px;
 }
@@ -94,6 +100,8 @@ div {
   margin-left: auto;
   margin-right: auto;
 }
+
+
 #whatIftd {
   width: 50%;
 }
@@ -106,14 +114,11 @@ div {
   -moz-border-radius: 12px;
   width: 100%;
   margin: auto;
-}
-#whatIfContainer h1 {
-  font-size: 21px;
-}
-#whatIfContainer h2 {
-  font-size: 19px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 #dynamicTitle {
+  font-size: 21px;
   font-weight: 800;
 }
 #whatIfLink:link, :visited {

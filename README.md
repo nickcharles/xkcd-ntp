@@ -9,8 +9,10 @@ Written in pure JavaScript cause who needs JQuery.
 
 TODO:
 Add expanding section that shows alt text below the comic.
-Center display?
-Add bookmarks on page to expand utility.
+Upload new photos to Web Store.
+Did I actually just put Web Store photos in the todo list.
+Come up with new ideas to implement.
+Help me.
 
 Now available on the Chrome Web Store at https://chrome.google.com/webstore/detail/xkcd-new-tab-page/cjakkpghoepnjecfepbmmfofbbjijmgh
 
